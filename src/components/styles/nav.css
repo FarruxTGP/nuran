@@ -1,0 +1,35 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw;
+    position: relative;
+    z-index: 2;
+}
+body{
+    background: #181818;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2.3vw;
+}
+
+nav .call {
+    position: static;
+}
+
+nav * {
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+}
+
+nav li>a {
+    font-family: 'Roboto';
+    font-size: 1vw;
+}
+
+nav .logo img {
+    width: 7vw;
+}

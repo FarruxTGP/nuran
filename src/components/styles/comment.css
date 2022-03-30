@@ -1,0 +1,71 @@
+.card__comment {
+    background: rgba(63, 63, 63, 0.2);
+    padding: 1.5vw;
+    border-radius: .7vw;
+}
+
+.card__comment * {
+    font-family: 'Roboto';
+    color: #fff;
+    font-weight: 200;
+    text-transform: uppercase;
+    text-align: justify;
+    font-size: 1.2vw;
+}
+
+.user__profile {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1vw;
+    margin-top: 3vw;
+}
+
+.user__profile .row__start {
+    display: flex;
+    gap: 1vw;
+    margin-top: 1vw;
+}
+
+.user__profile .row__start img {
+    width: 1.4vw;
+}
+
+.user__profile p span {
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.user__profile .user__img {
+    width: 4vw;
+}
+
+.up__card {
+    padding: 0 2vw;
+}
+.up__card iframe{
+    width: 100%;
+    height: 20vw;
+    margin-top: 3vw;
+    border-radius: .5vw;
+}
+.comment__body .slick-next, .comment__body .slick-prev{
+    /* top: 25%; */
+}
+.comment__body .slick-next{
+    right: 2.5vw;
+}
+.comment__body .slick-prev{
+    left: 2.5vw;
+}
+.row__iframe{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 3vw;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 5vw;
+}
+.row__iframe iframe {
+    width: 100%;
+    height: 20vw;
+}

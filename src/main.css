@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap');
+@font-face {
+    font-family: 'zona-bold';
+    src: url(./assets/ZonaPro-Bold.otf);
+}
+
+@font-face {
+    font-family: 'zona-light';
+    src: url(./assets/ZonaPro-ExtraLight.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+.container{
+    width: 70%;
+    position: relative;
+    margin:  0 auto;
+}
+.welcome {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./assets/img/bg.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding: 4vw 0;
+    text-align: center;
+}
+
+.welcome .logo img {
+    width: 14.7vw;
+}
+
+.welcome * {
+    font-size:  1.875vw;
+    color: #fff;
+    font-family: 'Roboto';
+}
+.welcome p span{
+    font-family: 'Cardo';
+    color: #FFE99C;
+}
+.welcome p{
+    margin-top: 2.96875vw;
+}
+.row__setlang{
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+    margin-top: 5vw;
+}
+.row__setlang button{
+    border: 1px solid #fff;
+    color: #ffff;
+    background-color: transparent;
+    width: 6vw;
+    font-size: 1vw;
+    padding: .5vw 0;
+    cursor: pointer;
+}
+.row__setlang button:hover{
+    border: #FFE99C solid 1px;
+    color: #FFE99C;
+}
+
+.welcome .row__social{
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+    margin-top: 6vw;
+}
+.welcome .row__social img{
+    width: 2vw;
+}
+.call .n{
+    display: grid;
+}
+.call {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    position: fixed;
+    top: 3vw;
+    gap: .4vw;
+    right: 3vw;
+    align-items: center;
+}
+.call a{
+    text-decoration: none;
+    font-size: 1vw;
+    font-family: 'zona-light';
+    text-align: left;
+}
