@@ -53,7 +53,16 @@ function Home() {
   function Finishing() {
     return <Finishings />;
   }
-
+  function Parts(){
+    return(
+      <>
+      <div style={{marginTop: "5vw"}}></div>
+        <Partner />
+        <Contact />
+        <Footer />
+      </>
+    );
+  }
  
 
   return (
@@ -70,6 +79,7 @@ function Home() {
               <Route path="/finishing" element={<Finishing />} />
               <Route path="/about" element={<About />} />
               <Route path="/service" element={<Servis />} />
+              <Route path="/partners" element={<Parts />} />
               <Route path="/interer/:id" element={<IntererItem />} />
               <Route path="/finishing/:id" element={<IntererItem />} />
               <Route path="/service/:id" element={<ServiceItem />} />

@@ -17,16 +17,16 @@ function Nav() {
       <FadeIn>
         <ul>
           <li>
-            <a href="#">услуги</a>
+            <NavLink to={"/service"}>услуги</NavLink>
           </li>
           <li>
-            <a href="#">галерия</a>
+            <NavLink to={"/interer"}>галерия</NavLink>
           </li>
           <li>
-            <a href="#">партнеры</a>
+            <NavLink to={"/partners"}>партнеры</NavLink>
           </li>
           <li>
-            <a href="#">контакы</a>
+            <NavLink to={"/about"}>контакы</NavLink>
           </li>
           <div className="call">
             <img src={call} alt="" />
