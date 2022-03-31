@@ -60,6 +60,10 @@
     position: relative;
     z-index: 2;
 }
+.navigation a.active{
+    background-color: #FFE99C;
+    color: #000;
+}
 
 .header .bg {
     width: 40vw;
@@ -76,8 +80,12 @@
     display: flex;
     justify-content: flex-end;
     gap: 2vw;
+    position: fixed;
+    right: 15%;
+    z-index: 9999;
     align-items: center;
 }
+
 .header__bottom .down{
     border: transparent;
     padding: .4vw;

@@ -27,8 +27,6 @@ function Home() {
   function Body() {
     return (
       <>
-        <Header />
-        <HeaderBottom />
         <div data-aos="fade-up" data-aos-anchor-placement="top-center">
           <Sliders />
         </div>
@@ -53,17 +51,16 @@ function Home() {
   function Finishing() {
     return <Finishings />;
   }
-  function Parts(){
-    return(
+  function Parts() {
+    return (
       <>
-      <div style={{marginTop: "5vw"}}></div>
+        <div style={{ marginTop: "5vw" }}></div>
         <Partner />
         <Contact />
         <Footer />
       </>
     );
   }
- 
 
   return (
     <div>
@@ -73,6 +70,8 @@ function Home() {
         <div className="container">
           <BrowserRouter>
             <Nav />
+            <Header />
+            <HeaderBottom />
             <Routes>
               <Route path="/" element={<Body />} />
               <Route path="/interer" element={<Interer />} />
