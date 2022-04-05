@@ -4,9 +4,11 @@ import FadeIn from "react-fade-in/lib/FadeIn";
 import "../components/styles/partner.css";
 import img from "../assets/img/part.png";
 
+
 function Partner() {
   return (
     <div>
+     
       <div className="title__partner">
         <img src={partner} alt="" />
         ПАРТНЕРЫ

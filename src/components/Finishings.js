@@ -7,16 +7,21 @@ import arrow from "../assets/img/arrow.svg";
 import refresh from "../assets/img/refresh.svg";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import ScrollAdd from "./ScrollAdd";
+import Header from "./Header";
+import HeaderBottom from "./HeaderBottom";
 function Finishings() {
   const [tab, setTab] = React.useState(0);
   return (
     <div>
+     
+      <HeaderBottom />
       <div className="header__inter">
         <button className={tab == 0 && "active"} onClick={() => setTab(0)}>
-        отделка{" "}
+          отделка{" "}
         </button>
         <button className={tab == 1 && "active"} onClick={() => setTab(1)}>
-        CТРОИТЕЛЬСТВА{" "}
+          CТРОИТЕЛЬСТВА{" "}
         </button>
       </div>
       {tab === 0 ? (
@@ -38,7 +43,10 @@ function Finishings() {
         <FadeIn className="body__inter">
           {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
             <Link to={"" + item} className="item__inter">
-              <img src='https://i.pinimg.com/originals/59/c7/da/59c7dadbc6476090705a28b632e74f4e.jpg' alt="" />
+              <img
+                src="https://i.pinimg.com/originals/59/c7/da/59c7dadbc6476090705a28b632e74f4e.jpg"
+                alt=""
+              />
               <div className="tec">
                 <div className="col">
                   <span>Лофт</span>

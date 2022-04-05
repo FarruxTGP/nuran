@@ -7,10 +7,12 @@ import arrow from "../assets/img/arrow.svg";
 import refresh from "../assets/img/refresh.svg";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import HeaderBottom from "./HeaderBottom";
 function Interers() {
   const [tab, setTab] = React.useState(0);
   return (
     <div>
+      <HeaderBottom />
       <div className="header__inter">
         <button className={tab == 0 && "active"} onClick={() => setTab(0)}>
           интерьер{" "}
@@ -22,7 +24,7 @@ function Interers() {
       {tab === 0 ? (
         <FadeIn className="body__inter">
           {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
-            <Link to={''+ item} className="item__inter">
+            <Link to={"" + item} className="item__inter">
               <img src={img} alt="" />
               <div className="tec">
                 <div className="col">
@@ -37,7 +39,7 @@ function Interers() {
       ) : (
         <FadeIn className="body__inter">
           {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
-            <Link to={''+ item} className="item__inter">
+            <Link to={"" + item} className="item__inter">
               <img src={img1} alt="" />
               <div className="tec">
                 <div className="col">

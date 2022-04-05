@@ -27,6 +27,19 @@
     position: relative;
     text-transform: uppercase;
     margin: 5vw 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    cursor: pointer;
+}
+
+.header button img {
+    width: 2.2vw;
+}
+
+.header button:hover::after {
+    right: -.5vw;
 }
 
 .header button::after {
@@ -36,7 +49,8 @@
     content: "";
     position: absolute;
     top: -1vw;
-    right: -1vw;
+    right: 3vw;
+    transition: .4s;
     border-radius: 50%;
 }
 
@@ -52,6 +66,7 @@
     align-items: center;
     text-align: left;
     justify-content: center;
+    cursor: pointer;
 }
 
 .header .navigation {
@@ -60,9 +75,30 @@
     position: relative;
     z-index: 2;
 }
-.navigation a.active{
+
+.navigation a.active, .header .navigation a:hover {
     background-color: #FFE99C;
     color: #000;
+}
+.transform{
+    animation: trans 1s both;
+}
+@keyframes trans {
+    0%{
+        transform: translateX(0px);
+    }
+    25%{
+        transform: translateX(2vw);
+    }
+    50%{
+        transform: translateX(0px);
+    }
+    75%{
+        transform: translateX(2vw);
+    }
+    100%{
+        transform: translateX(0px);
+    }
 }
 
 .header .bg {
@@ -76,7 +112,13 @@
     z-index: 0;
     transition: .4s;
 }
-.header__bottom{
+
+.header .bg.bg2 {
+    background-image: url(../../assets/img/bgheader2.png);
+
+}
+
+.header__bottom {
     display: flex;
     justify-content: flex-end;
     gap: 2vw;
@@ -84,9 +126,10 @@
     right: 15%;
     z-index: 9999;
     align-items: center;
+    bottom: 6vw;
 }
 
-.header__bottom .down{
+.header__bottom .down {
     border: transparent;
     padding: .4vw;
     background-color: #FFE99C;
@@ -100,17 +143,20 @@
     cursor: pointer;
     font-size: 1vw;
 }
-.header__bottom .msg{
+
+.header__bottom .msg {
     width: 3vw;
     height: 3vw;
     border: transparent;
     border-radius: 50%;
     background-color: #181818;
-    background-image: url(../../assets/img/msg.png);
+    background-image: url(../../assets/img/msg.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    cursor: pointer;
 }
-.modal{
+
+.modal {
     position: fixed;
     z-index: 99;
     top: 0;
@@ -122,9 +168,10 @@
     height: 100vh;
     backdrop-filter: blur(5px);
 }
-.modal__body{
+
+.modal__body {
     display: grid;
-    gap: 1vw    ;
+    gap: 1vw;
     background-color: #181818;
     padding: 2vw;
     position: relative;
@@ -132,15 +179,18 @@
     box-shadow: 0 0 10px black;
     animation: scale .1s both;
 }
+
 @keyframes scale {
-    from{
+    from {
         transform: scale(.3);
     }
-    to{
+
+    to {
         transform: scale(1);
     }
 }
-.modal__body input{
+
+.modal__body input {
     padding: .4vw 1vw;
     width: 30vw;
     background-color: transparent;
@@ -149,7 +199,8 @@
     font-size: 1.3vw;
     color: #fff;
 }
-.modal__body button{
+
+.modal__body button {
     background-color: #FFE99C;
     color: #000;
     padding: .4vw;
@@ -157,6 +208,7 @@
     border: none;
     cursor: pointer;
 }
+
 .modal__body span {
     font-size: 2vw;
     color: #fff;

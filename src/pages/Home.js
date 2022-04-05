@@ -18,26 +18,41 @@ import Servis from "../components/Servis";
 import ServiceItem from "../components/ServiceItem";
 
 function Home() {
-  const [welcome, setWelcome] = useState(true);
+  const [welcome, setWelcome] = useState(false);
   React.useEffect(() => {
     Aos.init({
       duration: 500,
     });
+    localStorage.getItem("lang") ? setWelcome(false) : setWelcome(true);
   }, []);
   function Body() {
     return (
       <>
-        <div data-aos="fade-up" data-aos-anchor-placement="top-center">
-          <Sliders />
+        <Header
+          buttonName={"перейти"}
+          titleName={"интерьер и экстерьер дизайн"}
+          imgName={"bg"}
+        />
+        <HeaderBottom />
+
+        <div id="gallery">
+          <div data-aos="fade-up" data-aos-anchor-placement="top-center">
+            <Sliders />
+          </div>
         </div>
-        <div data-aos="fade-up" data-aos-anchor-placement="top-center">
-          <Partner />
+
+        <div id="partner">
+          <div data-aos="fade-up" data-aos-anchor-placement="top-center">
+            <Partner />
+          </div>
         </div>
         <div data-aos="fade-up" data-aos-anchor-placement="top-center">
           <Comment />
         </div>
-        <div data-aos="fade-up" data-aos-anchor-placement="top-center">
-          <Contact />
+        <div id="contact">
+          <div data-aos="fade-up" data-aos-anchor-placement="top-center">
+            <Contact />
+          </div>
         </div>
         <div data-aos="fade-up" data-aos-anchor-placement="top-center">
           <Footer />
@@ -54,6 +69,11 @@ function Home() {
   function Parts() {
     return (
       <>
+        <Header
+          titleName={"партнеры"}
+          buttonName={"смотреть проэкты"}
+          imgName={"bg bg2"}
+        />
         <div style={{ marginTop: "5vw" }}></div>
         <Partner />
         <Contact />
@@ -70,8 +90,8 @@ function Home() {
         <div className="container">
           <BrowserRouter>
             <Nav />
-            <Header />
-            <HeaderBottom />
+            {/* <Header /> */}
+            {/* <HeaderBottom /> */}
             <Routes>
               <Route path="/" element={<Body />} />
               <Route path="/interer" element={<Interer />} />

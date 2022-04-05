@@ -33,3 +33,6 @@ nav li>a {
 nav .logo img {
     width: 7vw;
 }
+nav > ul{
+    position: relative;
+}

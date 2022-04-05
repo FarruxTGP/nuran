@@ -1,10 +1,19 @@
 import React from "react";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import ScrollAdd from "./ScrollAdd";
+import Header from "./Header";
 function Servis() {
   return (
     <div>
+      <Header
+        titleName={"УСЛУГИ ДИЗАЙНЕРА"}
+        buttonName={"смотреть проэкты"}
+        imgName={"bg bg2"}
+        active='servis'
+      />
       <div className="about">
+        <ScrollAdd />
         {[1, 2, 3, 4].map((item) => (
           <Link to={"" + item}>
             <div

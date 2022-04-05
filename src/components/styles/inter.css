@@ -33,7 +33,8 @@
     width: 100%;
 
 }
-.body__inter img:not(.tec img){
+
+.body__inter img:not(.tec img) {
     height: 27vw;
     object-fit: cover;
 }
@@ -251,4 +252,36 @@
 .product .info button:active {
     background-color: #ffe483;
     transform: scale(.98);
+}
+
+.product .carousel .thumb:last-child {
+    position: relative;
+}
+
+.product .carousel .thumb:last-child::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "+6";
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4vw;
+    font-weight: 100;
+    background-color: rgba(0, 0, 0, 0.727);
+}
+.tec img{
+    animation: both infinite tos 1.4s;
+}
+@keyframes tos {
+    from{
+        transform: translateX(-20px);
+        opacity: 1;
+    }
+    to{
+        transform: translateX(10px);
+        opacity: 0;
+    }
 }

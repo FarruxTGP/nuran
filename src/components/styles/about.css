@@ -94,6 +94,7 @@
 .faq .accordion__button:before {
     position: absolute;
     right: 0;
+    transition: .4s;
 }
 
 .faq iframe {
@@ -121,4 +122,16 @@
     border-radius: .3vw;
     font-size: 1vw;
     background-color: #f6f6f611;
+}
+.accordion__panel{
+    animation: fade .3s both  !important;
+    overflow: hidden;
+}
+@keyframes fade {
+    from{
+        height: 0px;
+    }
+    to{
+        height: 20vw;
+    }
 }

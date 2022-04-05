@@ -7,7 +7,7 @@ import facebook from "../assets/img/facebook.svg";
 import call from "../assets/img/call.svg";
 import { Context } from "./Wrapper";
 import FadeIn from "react-fade-in/lib/FadeIn";
-function Welcome({setWelcome}) {
+function Welcome({ setWelcome }) {
   const context = React.useContext(Context);
   return (
     <div className="welcome">
@@ -17,9 +17,36 @@ function Welcome({setWelcome}) {
           Добро пожаловать в <span>Nuran Group</span>
         </p>
         <FadeIn className="row__setlang">
-          <button value={'uz'} onClick={()=> setWelcome(false) && context.selectLanguage}>UZ</button>
-          <button value={'ru'} onClick={()=> setWelcome(false) && context.selectLanguage}>RU</button>
-          <button value={'en'} onClick={()=> setWelcome(false) && context.selectLanguage}>ENG</button>
+          <button
+            value={"uz"}
+            onClick={() => {
+              localStorage.setItem("lang", "uz");
+              setWelcome(false);
+            }}
+            onMouseEnter={context.selectLanguage}
+          >
+            UZ
+          </button>
+          <button
+            value={"ru"}
+            onClick={() => {
+              localStorage.setItem("lang", "ru");
+              setWelcome(false);
+            }}
+            onMouseEnter={context.selectLanguage}
+          >
+            RU
+          </button>
+          <button
+            value={"en"}
+            onClick={() => {
+              localStorage.setItem("lang", "en");
+              setWelcome(false);
+            }}
+            onMouseEnter={context.selectLanguage}
+          >
+            ENG
+          </button>
         </FadeIn>
         <FadeIn className="row__social">
           <a href="#">

@@ -76,10 +76,12 @@
     height: 4vw;
     position: absolute;
     background-repeat: no-repeat;
+    background-size: 72%;
 }
 
 .slick-prev:before {
     content: "" !important;
+    background-size: 72%;
     background-image: url(../../assets/img/arrow.svg) !important;
     width: 5vw;
     height: 4vw;
